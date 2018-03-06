@@ -31,7 +31,6 @@ export class ZipsonStreamWriter extends ZipsonWriter {
       this._buffer = '';
     }
     this._stream.push(null);
-    this._stream.emit('end');
   }
 
   get stream() {

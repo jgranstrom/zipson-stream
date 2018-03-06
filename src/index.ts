@@ -1,5 +1,5 @@
 import { Readable } from 'stream';
-import { stringifyTo, parseIncremental } from 'zipson';
+import { stringifyTo, parseIncremental, CompressOptions } from 'zipson';
 import { ZipsonStreamWriter } from './ZipsonStreamWriter';
 
 /**
@@ -27,13 +27,13 @@ export function parseStream(stream: Readable) {
  * Pass an optional bufferThreshold to set a minimum size of chunks written to the stream.
  * Returns the stream of zipson output
  */
-export function stringifyStream(data: any, bufferThreshold?: number): Readable {
+export function stringifyStream(data: any, options?: CompressOptions, bufferThreshold?: number): Readable {
   const writer = new ZipsonStreamWriter(bufferThreshold);
 
   // Defer stringify in order to return stream and proxy errors
   setTimeout(() => {
     try {
-      stringifyTo(data, writer);
+      stringifyTo(data, writer, options);
     } catch(e) {
       writer.stream.emit('error', e);
     }

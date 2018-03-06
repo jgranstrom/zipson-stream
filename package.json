@@ -7,13 +7,15 @@
   "scripts": {
     "start": "node .",
     "prepare": "npm run build",
-    "build": "tsc",
     "w": "run-p w:*",
     "w:compile": "tsc -w 1>/dev/null",
     "w:start": "nodemon -q .",
     "test": "mocha --require ts-node/register --watch-extensions ts 'test/**/*.ts'",
     "testw": "mocha -w --require ts-node/register --watch-extensions ts 'test/**/*.ts'",
-    "release": "standard-version"
+    "release": "standard-version",
+    "build": "run-s build:*",
+    "build:clean": "rm -rf lib",
+    "build:ts": "tsc"
   },
   "repository": "jgranstrom/zipson-stream",
   "author": "John Granström <granstrom.john@gmail.com>",

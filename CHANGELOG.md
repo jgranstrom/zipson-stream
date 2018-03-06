@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.2"></a>
+## [0.3.2](https://github.com/jgranstrom/zipson-stream/compare/v0.3.1...v0.3.2) (2018-03-06)
+
+
+### Bug Fixes
+
+* fix premature end event ([ee84248](https://github.com/jgranstrom/zipson-stream/commit/ee84248))
+
+
+
 <a name="0.3.1"></a>
 ## [0.3.1](https://github.com/jgranstrom/zipson-stream/compare/v0.3.0...v0.3.1) (2018-03-06)
 

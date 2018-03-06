@@ -11,6 +11,9 @@ export class ZipsonStreamWriter extends ZipsonWriter {
 
   constructor(private bufferThreshold: number = 250) { super(); }
 
+  /**
+   * Write a chunk of zipson output
+   */
   write(data: string) {
     this._buffer += data;
     if(this._buffer.length > this.bufferThreshold) {
@@ -19,12 +22,16 @@ export class ZipsonStreamWriter extends ZipsonWriter {
     }
   }
 
+  /**
+   * End zipson stream
+   */
   end() {
     if(this._buffer.length > 0) {
       this._stream.push(this._buffer);
       this._buffer = '';
     }
     this._stream.push(null);
+    this._stream.emit('end');
   }
 
   get stream() {

@@ -1,6 +1,6 @@
 import { describe, it } from 'mocha';
 import { expect } from 'chai';
-import { ZipsonStreamWriter } from '../src';
+import { ZipsonStreamWriter } from '../src/ZipsonStreamWriter';
 import { stringify, stringifyTo } from 'zipson';
 
 describe('stream-writer', function() {

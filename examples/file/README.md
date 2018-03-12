@@ -1,0 +1,1 @@
+Stringifies data to a file and then parses the resulting file

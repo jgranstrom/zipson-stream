@@ -2,3 +2,4 @@ src
 test
 .vscode
 tsconfig.json
+examples

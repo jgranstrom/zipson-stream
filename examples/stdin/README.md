@@ -1,0 +1,1 @@
+Parses data from stdin. Use the try script to pipe in a stringified array

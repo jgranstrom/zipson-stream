@@ -1,0 +1,1 @@
+An http server stringifies some data to a client and the client parses the stream of data

@@ -1,0 +1,1 @@
+Stringifies some data and pipes the output to stdout

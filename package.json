@@ -1,6 +1,6 @@
 {
   "name": "zipson-stream",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Stream support for zipson",
   "main": "lib/index.js",
   "types": "lib/index.d.js",
